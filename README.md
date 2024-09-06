@@ -1,8 +1,3 @@
-Here's a sample `README.md` for your SimpleBrowse project. It covers the main features, setup instructions, and other relevant information.
-
-### `README.md`
-
-```markdown
 # SimpleBrowse
 
 SimpleBrowse is an intuitive, easy-to-use file explorer tool designed to enhance file and folder management. With features like search, file operations, and a clean interface, SimpleBrowse aims to simplify your workflow while providing essential file management capabilities.
@@ -84,30 +79,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For support or inquiries, please contact [your-email@example.com](mailto:your-email@example.com).
-```
-
-### How to Use the `README.md`
-
-1. **Copy and Paste**: Copy the content above and paste it into a new file named `README.md` in your project directory.
-2. **Customize**: Update the `git clone` URL, contact email, and any other specific details as needed.
-3. **Commit and Push**:
-   - Add the `README.md` file to your Git repository:
-
-     ```bash
-     git add README.md
-     ```
-
-   - Commit the file:
-
-     ```bash
-     git commit -m "Add README.md"
-     ```
-
-   - Push the changes to your GitHub repository:
-
-     ```bash
-     git push origin main
-     ```
-
-This `README.md` provides a clear overview of your project, making it easy for others to understand and use SimpleBrowse. Let me know if you need any more help!
+For support or inquiries, please contact [ashwyn222@gmail.com](mailto:ashwyn222@gmail.com).
