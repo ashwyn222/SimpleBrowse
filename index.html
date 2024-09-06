@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Explorer</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="toolbar-container">
+        <div class="toolbar">
+            <input type="text" id="search" placeholder="Search..." oninput="filterFiles()" />
+            <button id="refresh-btn" onclick="refreshDirectory()">Refresh</button>
+            <label>
+                <input type="checkbox" id="toggle-hidden" onchange="toggleHidden()" /> Show hidden files
+            </label>
+            <div id="file-count" class="file-count">Files: 0</div>
+            <div id="total-size" class="total-size">Total Size: 0 B</div>
+        </div>
+        <div class="breadcrumb" id="breadcrumb"></div>
+    </div>
+    <div id="loading-spinner" class="loading-spinner" style="display:none"></div>
+    <table>
+        <thead>
+            <tr>
+                <th class="sort-icon" onclick="sortFiles('name')">Name</th>
+                <th class="sort-icon" style="width:150px" onclick="sortFiles('type')">Type</th>
+                <th class="sort-icon" style="width:150px" onclick="sortFiles('size')">Size</th>
+                <th class="sort-icon" style="width:200px" onclick="sortFiles('created')">Created</th>
+                <th class="sort-icon" style="width:200px" onclick="sortFiles('modified')">Modified</th>
+                <th class="sort-icon" style="width:200px" onclick="sortFiles('lastAccessed')">Last Opened</th>
+            </tr>
+        </thead>
+        <tbody id="file-list"></tbody>
+    </table>
+
+    <script src="./renderer.js"></script>
+</body>
+</html>
+

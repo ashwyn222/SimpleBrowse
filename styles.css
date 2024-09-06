@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.toolbar-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.toolbar input[type="text"] {
+    padding: 5px;
+    font-size: 14px;
+    width: 500px;
+}
+
+.toolbar label {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.toolbar button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #09f;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.file-count {
+    margin-left: auto;
+    font-size: 14px;
+}
+
+.total-size {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.total-size strong {
+    font-weight: bold;
+}
+
+.breadcrumb {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.table-container {
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    position: sticky;
+    top: 97px;
+    z-index: 500;
+}
+td:nth-child(1) span:hover {
+    cursor: pointer;
+}
+td:nth-child(1):hover {
+    color: blue;
+}
+.folder {
+    font-weight: bold;
+}
+
+.breadcrumb {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.breadcrumb span {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+.breadcrumb span + span::before {
+    content: " > ";
+}
+
+.sort-icon {
+    font-size: 12px;
+    margin-left: 5px;
+    opacity: 1;
+}
+
+.sort-icon.asc::after {
+    content: "▲";
+}
+
+.sort-icon.desc::after {
+    content: "▼";
+}
+
+.sort-icon.none::after {
+    content: " ";
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+td:nth-child(1) {
+    position: relative;
+    padding-right: 40px;
+}
+.context-menu {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+    z-index: 1000;
+    width: 120px;
+}
+
+.context-menu div {
+    padding: 8px 12px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.context-menu div:hover {
+    background-color: #f0f0f0;
+}
+
+.rename-input {
+    width: calc(100% - 40px);
+    padding: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
