@@ -2,6 +2,8 @@
 
 SimpleBrowse is an intuitive, easy-to-use file explorer tool designed to enhance file and folder management. With features like search, file operations, and a clean interface, SimpleBrowse aims to simplify your workflow while providing essential file management capabilities.
 
+![SimpleBrowse Screenshot](./assets/app-screenshot.png)
+
 ## Features
 
 - **File and Folder Navigation**: Easily navigate through directories with a simple and intuitive interface.
