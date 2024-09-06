@@ -329,5 +329,17 @@ function openFile(filePath) {
     window.electronAPI.openFile(filePath);
 }
 
+function minimizeWindow() {
+    window.electronAPI.minimizeWindow();
+}
+
+function toggleMaximizeWindow() {
+    window.electronAPI.toggleMaximizeWindow();
+}
+
+function closeWindow() {
+    window.electronAPI.closeWindow();
+}
+
 // Start by loading the Downloads directory
 navigateTo('');

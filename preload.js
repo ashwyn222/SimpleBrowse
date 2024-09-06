@@ -6,5 +6,8 @@ contextBridge.exposeInMainWorld('electronAPI', {
     copyFile: (filePath) => ipcRenderer.invoke('copy-file', filePath),
     copyFilePath: (filePath) => ipcRenderer.invoke('copy-file-path', filePath),
     deleteFile: (filePath) => ipcRenderer.invoke('delete-file', filePath),
-    renameFile: (oldPath, newName) => ipcRenderer.invoke('rename-file', oldPath, newName)
+    renameFile: (oldPath, newName) => ipcRenderer.invoke('rename-file', oldPath, newName),
+    minimizeWindow: () => ipcRenderer.send('minimize-window'),
+    toggleMaximizeWindow: () => ipcRenderer.send('toggle-maximize-window'),
+    closeWindow: () => ipcRenderer.send('close-window')
 });

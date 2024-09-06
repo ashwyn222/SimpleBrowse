@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Explorer</title>
+    <title>Simple Browse</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <div class="title-bar">
+        <div class="title-bar-buttons">
+            <button class="close-btn" onclick="closeWindow()">✕</button>
+            <button class="minimize-btn" onclick="minimizeWindow()">—</button>
+            <button class="maximize-btn" onclick="toggleMaximizeWindow()">⬜</button>
+        </div>
+        
+        <div class="title-bar-drag-region">
+            <div class="title-bar-title">SimpleBrowse</div>
+        </div>
+    </div>
     <div class="toolbar-container">
         <div class="toolbar">
             <input type="text" id="search" placeholder="Search..." oninput="filterFiles()" />

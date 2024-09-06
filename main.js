@@ -5,10 +5,13 @@ const os = require('os');
 
 app.disableHardwareAcceleration();
 
+var mainWindow;
+
 function createWindow() {
-    const mainWindow = new BrowserWindow({
+    mainWindow = new BrowserWindow({
         width: 800,
         height: 600,
+        frame: false,
         icon: path.join(__dirname, 'assets', 'app-icon.png'),
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
@@ -119,4 +122,20 @@ ipcMain.handle('get-directory-contents', async (event, dirPath) => {
     const content = await Promise.all(contentPromises);
 
     return { content, breadcrumbs };
+});
+
+ipcMain.on('minimize-window', () => {
+    mainWindow.minimize();
+});
+
+ipcMain.on('toggle-maximize-window', () => {
+    if (mainWindow.isMaximized()) {
+        mainWindow.unmaximize();
+    } else {
+        mainWindow.maximize();
+    }
+});
+
+ipcMain.on('close-window', () => {
+    mainWindow.close();
 });
